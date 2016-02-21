@@ -1,3 +1,5 @@
+const L = require('leaflet');
+
 L.MapboxGL = L.Class.extend({
 
     initialize: function (options) {
@@ -83,7 +85,7 @@ L.MapboxGL = L.Class.extend({
             container.style.height = size.y + 'px';
             gl.resize();
         } else {
-            gl.update();
+            gl._update();
         }
     },
 
